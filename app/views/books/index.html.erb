@@ -1,9 +1,5 @@
 <h2>User info</h2>
-<%= image_tag @user.get_profile_image(100,100) %>
-<h4>name<%= @user.name %></h4>
-<h4>introduction<%= @user.introduction %></h4>
 
-<%= link_to 'edit',edit_user_path(current_user.id) %>
 
 
 <h2>New book</h2>
@@ -17,8 +13,7 @@
   <%= f.submit 'Create Book' %>
 <% end %>
 
-
-<h2>Books</h2>
+<h1>Books</h1>
 
 <% @books.each do |book| %>
 
