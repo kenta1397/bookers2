@@ -14,6 +14,7 @@ class BooksController < ApplicationController
     def index
         @book = Book.new
         @books = Book.all
+        @user = current_user
     end
 
     def show
@@ -30,13 +31,13 @@ class BooksController < ApplicationController
     def update
         @book = Book.find(params[:id])
         @book.update(book_params)
-        redirect_to users_path
+        redirect_to books_path
     end
 
     def destroy
         @book = Book.find(params[:id])
         @book.destroy
-        redirect_to users_path
+        redirect_to books_path
     end
 
     private
